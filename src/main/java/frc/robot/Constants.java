@@ -21,10 +21,12 @@ public interface Constants {
 		public static final int xboxPrimaryDriver = 0;
 		public static final int xboxSecondaryDriver = 2;
 		public static final int joystickDriver = 1;
+		//WORK ON CONTROLS WITH THE DRIVERS
 
 		// Other Can Bus
 		public final static int PDP = 0;
 		public final static int PCM = 1;
+		//CHECK THESE NUMBERS
 
 		// Drivetrain
 		public final static int rightMotor1 = 12;
@@ -39,6 +41,7 @@ public interface Constants {
 		// Intake
 		public final static int intakeMotor1 = 1;
 		public final static int intakeMotor2 = 0;
+		//CHECK THESE NUMBERS
 
 	}
 }

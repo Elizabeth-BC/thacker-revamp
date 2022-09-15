@@ -36,6 +36,7 @@ public class RobotContainer implements Constants.ElectricalPortConstants {
   private UsbCamera camera;
 
   public RobotContainer() {
+    //TALK TO DRIVERS AND SEE IF THEY WANT/NEED A CAMERA AND ADJUST ACCORDINGLY
     camera = CameraServer.startAutomaticCapture();
     camera.setFPS(30);
     camera.setResolution(
@@ -48,7 +49,7 @@ public class RobotContainer implements Constants.ElectricalPortConstants {
     chooser.addOption("TD: 5s", new TimedDrive(0.25, 5));
     chooser.addOption("RTD: 2s", new TimedDrive(-0.25, 2));
     chooser.addOption("RTD: 5s", new TimedDrive(-0.25, 5));
-
+    //NO AUTOS OTHER THAN TAXI, CHECK HOW FAR THACKER GOES *BEOFRE* OFFICIAL MATCHES
 
     Shuffleboard.getTab("Selector").add(chooser);
     
@@ -63,6 +64,7 @@ public class RobotContainer implements Constants.ElectricalPortConstants {
       .whenPressed(new DeployIntake())
       .whenPressed(new SpinIntakeIn())
       .whenReleased(new RetractIntake());
+      //WORK WITH DRIVERS TO FIGURE OUT CONTROLS AND CHECK THAT THEY ALL WORK
   } 
 
   private void configureDefaultCommands() {

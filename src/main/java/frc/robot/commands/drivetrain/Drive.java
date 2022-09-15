@@ -16,7 +16,7 @@ public class Drive extends CommandBase {
   public void execute() {
     double throttle = -RobotContainer.xbox.getSmoothedMainY();
     double heading = -RobotContainer.xbox.getSmoothedAltX();
-    // heading*=0.45; //original # was for Mantis so you need to test and check with Thacker
+    // heading*=0.45; //ORIGINAL # WAS FOR MANTIS SO CHECK AND ADJUST FOR THACKER
     RobotContainer.dt.tankDrive(throttle - heading, throttle + heading);
   }
 

@@ -7,10 +7,6 @@ import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup;
 public class Intake extends SubsystemBase implements HardwareAdapter {
   public final MotorControllerGroup intakeMotors;
   public Intake() {
-    intakeMotor1.setInverted(true);
-    intakeMotor1.burnFlash();
-    intakeMotor2.setInverted(false);
-    intakeMotor2.burnFlash();
     intakeMotors = new MotorControllerGroup(intakeMotor1, intakeMotor2);
   }
 

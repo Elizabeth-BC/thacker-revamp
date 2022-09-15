@@ -20,19 +20,23 @@ public interface HardwareAdapter extends Constants.ElectricalPortConstants {
     public static WPI_TalonSRX rightMotor2 = new WPI_TalonSRX(5);
     public static WPI_TalonSRX rightMotor3 = new WPI_TalonSRX(4);
     public final MotorControllerGroup rightSideMotors = new MotorControllerGroup(rightMotor1,rightMotor2,rightMotor3);
+    //CHECK THAT THE GROUP IS WORKING CORRECTLY *BEFORE* OFFICIAL MATCHES
 
     public static WPI_TalonSRX leftMotor1 = new WPI_TalonSRX(3);
     public static WPI_TalonSRX leftMotor2 = new WPI_TalonSRX(6);
     public static WPI_TalonSRX leftMotor3 = new WPI_TalonSRX(9);
     public final MotorControllerGroup leftSideMotors = new MotorControllerGroup(leftMotor1,leftMotor2,leftMotor3);
+    //CHECK THAT THE GROUP IS WORKING CORRECTLY *BEFORE* OFFICIAL MATCHES
 
     //Intake
     public final CANSparkMax intakeMotor1 = new CANSparkMax(9, MotorType.kBrushless); 
     public final CANSparkMax intakeMotor2 = new CANSparkMax(10, MotorType.kBrushless);
+    //CHECK THESE NUMBERS
 
     // Pnuematics
     public static final Compressor compressor = new Compressor(1, PneumaticsModuleType.CTREPCM);
     public static final DoubleSolenoid intakeSolenoid = new DoubleSolenoid(1,PneumaticsModuleType.CTREPCM, 7, 0);
     public static final DoubleSolenoid tiltSolenoid = new DoubleSolenoid(1, PneumaticsModuleType.CTREPCM, 6, 1);
+    //CHECK THESE NUMBERS
     // tiltSolenoid had a weird isCompetitionRobot? 6:1 for the ext/ret values so may have to be switched once you can test.
 }
